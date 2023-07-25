@@ -1,0 +1,87 @@
+site_name: Naemon
+site_url: https://naemon.io
+repo_url: https://github.com/naemon/naemon.github.io
+edit_uri: https://github.com/naemon/naemon.github.io/blob/main/en/docs/
+repo_name: GitHub
+dev_addr: 0.0.0.0:8000
+
+
+nav:
+  - Home: index.md
+  - Downloads: download.md
+  - Documentation:
+    - Documentation: documentation/index.md
+    - 'Object definitions': documentation/usersguide/objectdefinitions.md
+  - News: news.md
+  - 'Get involved': 'community.md'
+
+extra_javascript:
+  - vendor/jquery-3.6.0.min.js
+  - vendor/featherlight-v.1.7.14/release/featherlight.min.js
+
+markdown_extensions:
+  - toc:
+      permalink: True
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - def_list
+  - markdown_include.include:
+      base_path: docs
+  - admonition
+  - featherlight
+
+extra_css:
+  - bootstrap-selection.css
+  - vendor/font-awesome-4.7.0/css/font-awesome.min.css
+  - vendor/featherlight-v.1.7.14/release/featherlight.min.css
+  - bootstrap.min.css
+  - naemon.css
+
+plugins:
+  - search
+  - macros
+
+#  Theme docs: https://squidfunk.github.io/mkdocs-material/getting-started/
+theme:
+  name: material
+  language: en
+  logo: images/naemonlogo.svg
+  favicon: images/favicon.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: black
+      primary: black
+      accent: black
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: black
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+
+
+
+copyright: Naemon Development Team and Community Contributors
+
+extra:
+  site:
+    release_version: 1.4.1
+    release_date: 01 Feb 2023
+    next_release: Jun 2023
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/NaemonCore
+    - icon: fontawesome/brands/github
+      link: https://github.com/naemon/
